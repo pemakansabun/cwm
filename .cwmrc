@@ -1,0 +1,101 @@
+sticky yes
+snapdist 4
+gap 0 0 0 0
+color activeborder "#865DFF"
+color urgencyborder "#F94C10"
+color font "#E4F1FF"
+color menubg "#1C1427"
+color menufg "#373B41"
+fontname "Inconsolata:pixelsize=13:style=medium"
+
+unbind-key all
+
+
+bind-key 4-e "emacsclient -c"
+bind-key XF86AudioRaiseVolume "pactl set-sink-volume @DEFAULT_SINK@ +10%"
+bind-key XF86AudioLowerVolume "pactl set-sink-volume @DEFAULT_SINK@ -10%"
+bind-key XF86AudioMute "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bind-key XF86AudioMicMute "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+bind-key 4C-Return "st tmux"
+bind-key 4-Return "st tmux a"
+bind-key CM-l i3lock
+bind-key 4-BackSpace window-hide
+bind-key Print "scrot"
+
+bind-key 4-Down window-lower
+bind-key 4-Up window-raise
+bind-key 4-Tab window-cycle
+bind-key M-Tab window-cycle
+bind-key 4S-Tab window-rcycle
+bind-key MS-Tab window-rcycle
+bind-key 4-c window-delete
+bind-key 4-n window-menu-label
+
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-4 group-only-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-7 group-only-7
+bind-key 4-8 group-only-8
+bind-key 4-9 group-only-9
+
+bind-key 4S-1 window-movetogroup-1
+bind-key 4S-2 window-movetogroup-2
+bind-key 4S-3 window-movetogroup-3
+bind-key 4S-4 window-movetogroup-4
+bind-key 4S-5 window-movetogroup-5
+bind-key 4S-6 window-movetogroup-6
+bind-key 4S-7 window-movetogroup-7
+bind-key 4S-8 window-movetogroup-8
+bind-key 4S-9 window-movetogroup-9
+
+bind-key 4-a group-toggle-all
+bind-key 4-g window-group
+
+bind-key 4-Right group-cycle
+bind-key 4-Left group-rcycle
+bind-key 4-s window-stick
+
+bind-key 4-f window-fullscreen
+bind-key 4-m window-maximize
+bind-key 4-equal window-vmaximize
+bind-key 4S-equal window-hmaximize
+
+bind-key 4-h window-move-left-big
+bind-key 4-j window-move-down-big
+bind-key 4-k window-move-up-big
+bind-key 4-l window-move-right-big
+
+bind-key 4C-h window-resize-left-big
+bind-key 4C-j window-resize-down-big
+bind-key 4C-k window-resize-up-big
+bind-key 4C-l window-resize-right-big
+
+bind-key 4-q window-vtile
+bind-key 4-w window-htile
+
+bind-key 4-slash menu-window
+bind-key 4-question menu-cmd
+bind-key 4-d menu-exec
+bind-key 4-period menu-ssh
+
+bind-key 4S-r restart
+bind-key 4S-e quit
+
+
+unbind-mouse M-1
+unbind-mouse CM-1
+unbind-mouse M-2
+unbind-mouse M-3
+unbind-mouse CMS-3
+
+bind-mouse 4-1 window-move
+bind-mouse 4-3 window-resize
+bind-mouse 4-2 window-lower
+bind-mouse 4S-2 window-hide
+
+ignore xclock
+ignore tint2
+ignore polybar
